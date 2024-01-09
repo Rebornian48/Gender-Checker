@@ -16,22 +16,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gender Prediction</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <h1 class="title">prediksi gender berdasarkan nama depan</h1>
-    <main>
-        <div class="search" id="feature-search">
-            <label>Ketik nama disini</label>
-            <input type="text" placeholder="contoh: yuki" onkeydown="handleInput(event)" />
+    <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Prediksi Gender Berdasarkan Nama</h1>
+                <h1 class="text-5xl">&nbsp;</h1>
+                <main>
+                    <div class="search" id="feature-search">
+                        <label class="form-control">
+                            <div class="label">
+                                <span class="label-text">Ketik nama disini</span>
+                            </div>
+                            <input type="text" placeholder="Contoh : Lia" class="input input-bordered w-full"
+                                onkeydown="handleInput(event)" />
+                            <div class="label">
+                            </div>
+                        </label>
+                    </div>
+                    <h1 class="text-5xl">&nbsp;</h1>
+                    <div>
+                        <p class="result-gender" id="result-gender"></p>
+                    </div>
+                </main>
+            </div>
         </div>
-        <div class="spacer"></div>
-        <div>
-            <p class="result-gender" id="result-gender"></p>
-        </div>
-    </main>
+    </div>
     <script src="./assets/js/script.js"></script>
 </body>
 
