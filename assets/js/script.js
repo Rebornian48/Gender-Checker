@@ -7,19 +7,19 @@ async function getGender(name) {
 }
 
 async function setGender (name) {
-    const data = await getGender(name)
-    const resultGender = document.getElementById("result-gender")
+    const data = await getGender(name);
+    const resultGender = document.getElementById("result-gender");
 
-    const probability = data.probability * 100
-    const gender = data.gender == "male" ? "Pria" : "Wanita"
+    const probability = data.probability * 100;
+    const gender = data.gender == "male" ? "Pria" : "Wanita";
 
-    resultGender.textContent = `Halo ${name}, presentase kemungkinan anda seorang ${gender} adalah sebanyak ${probability}%`
+    resultGender.textContent = `Halo ${name}, presentase kemungkinan anda seorang ${gender} adalah sebanyak ${probability}%`;
 }
 
 async function handleInput(event) {
     if (event.code == "Enter" || event.keyCode == 13) {
         const query = event.target.value;
-        const name = query.replace(/\s/g,'');
+        const name = query.replace(/\s/g, "");
         await setGender(name);
     }
 }
