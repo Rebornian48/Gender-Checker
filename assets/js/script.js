@@ -23,17 +23,16 @@ async function getGender(name) {
  * @returns {*}
  */
 async function setGender(name) {
-    try {
-        const data = await getGender(name);
-        const resultGender = document.getElementById("result-gender");
+  const data = await getGender(name);
+  const resultGender = document.getElementById("result-gender");
 
-        const probability = data.probability * 100;
-        const gender = data.gender == "male" ? "Pria" : "Wanita";
-
-        resultGender.textContent = `Halo ${name}, presentase kemungkinan anda seorang ${gender} adalah sebanyak ${probability}%`;
-    } catch (error) {
-        console.error(error);
-    }
+  const probability = data.probability * 100;
+  const gender = data.gender == "male" ? "Pria" : "Wanita";
+  try {
+    resultGender.textContent = `Halo ${name}, presentase kemungkinan anda seorang ${gender} adalah sebanyak ${probability}%`;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 /**
