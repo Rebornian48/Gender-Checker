@@ -1,3 +1,6 @@
+var inputText = document.getElementById("inputText");
+inputText.addEventListener("keydown", handleInput);
+
 /**
  * Description placeholder
  * @date 1/13/2024 - 2:58:26 AM
